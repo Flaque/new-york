@@ -69,3 +69,17 @@ body, html {
   float: left;
   width: 300px;
 }
+
+
+#buy .content {
+  display: block;
+}
+
+#card .content {
+  display: block;
+}
+
+
+#card .row {
+  margin-bottom: 10px;
+}
