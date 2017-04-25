@@ -1,28 +1,53 @@
 <html>
-<head>
 
+<head>
+<script>
+function clickCounter(num) {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount && num == 0) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+        } else if (localStorage.clickcount && num == 1) {
+            localStorage.clickcount = Number(localStorage.clickcount)-1;
+        } else {
+            localStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML =localStorage.clickcount;
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+</script>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-
   <div class="root">
-
       <div class="content">
           <div class="cols">
+				<h1>How many days would you like to purchase?</h1>
+				    
+	<div class="right button">
+        <button onclick="clickCounter(0)" type="button" class="btn btn-default btn-lg" aria-label="Right Align">
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        </button>
+		<button onclick="clickCounter(1)" type="button" class="btn btn-default btn-lg" aria-label="Left Align">
+          <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+        </button>
+    </div> 
+	<h2 id="result" class="glyphicon"></h2>
+	<br />
+    <div class="right button">
+        <button type="button" class="btn btn-default btn-lg" aria-label="Right Align">
+            <a class="glyphicon glyphicon-shopping-cart" aria-hidden="true" href="oneTimePass-buy.html"></a>
+        </button>
+    </div>
+	<br />
+	<div>
+    </div>
 
-            <div class="location form-group">
-              <label class="sr-only" for="exampleInputAmount"> Search </label>
-              <input type="text" id="exampleInputAmount" class="form-control"/>
-              <a href="" class="btn btn-default">
-                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-              </a>
-            </div>
 
-            <img class="map" src="map.jpg">
-            </img>
-          </div>
+    
         </div>
     </div>
   </div>
