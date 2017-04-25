@@ -1,0 +1,71 @@
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cols {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer {
+  position: absolute;
+right: 0;
+bottom: 0;
+left: 0;
+text-align: center;
+background: gray;
+height: 100px;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+
+.root {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.footer-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+body, html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.map {
+  width: 700px;
+}
+
+.location  {
+  margin-bottom: 15px;
+  display: block;
+  width: 100%;
+}
+
+.location input {
+  float: left;
+  width: 300px;
+}
